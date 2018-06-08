@@ -580,12 +580,12 @@ body {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  padding-left: 3rem;
   position: relative;
   border-radius: 0; }
   @media (min-width: 36em) {
     .toggler {
-      background: #101010; } }
+      background: #101010;
+      padding-left: 3rem; } }
   .toggler:after {
     content: "";
     position: absolute;
@@ -599,13 +599,15 @@ body {
     @media (min-width: 36em) {
       .toggler:after {
         display: block; } }
+
+@media (hover: hover) {
   .toggler:hover .toggler__icon {
     background: transparent;
     transform: rotate(-90deg); }
     .toggler:hover .toggler__icon:before {
       transform: rotate(45deg); }
     .toggler:hover .toggler__icon:after {
-      transform: rotate(-45deg); }
+      transform: rotate(-45deg); } }
 
 .toggler--active .toggler__icon {
   transform: rotate(-90deg);

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,400italic);
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -541,20 +542,113 @@ body {
 .invisible {
   visibility: hidden; }
 
-body {
-  background: #345;
-  color: #fff; }
+/* //────  ──────────────────────────────────────────────────────────────────────────────────
+  HEADER */
+.main-navi {
+  padding: 0;
+  overflow: hidden; }
+  .main-navi__container {
+    -ms-flex-align: stretch !important;
+        align-items: stretch !important; }
+  .main-navi__brand {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
 
-.hero {
-  background: url("https://images.unsplash.com/photo-1495188821276-84991753921a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cd1bae27182139bf356d548183ef324f&auto=format&fit=crop&w=1350&q=80");
-  background-size: cover;
-  height: 100vh;
-  text-align: center;
+.social-and-toggler-wrapper {
+  display: -ms-flexbox;
+  display: flex; }
+
+.social {
+  list-style: none;
+  margin: 0 2rem 0 0;
+  -ms-flex-align: center;
+      align-items: center;
+  display: none; }
+  @media (min-width: 36em) {
+    .social {
+      display: -ms-flexbox;
+      display: flex; } }
+  .social__link {
+    color: #101010;
+    padding: 1rem; }
+
+/* //────  ──────────────────────────────────────────────────────────────────────────────────
+  TOGGLER */
+.toggler {
+  border: none;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
   -ms-flex-align: center;
-      align-items: center; }
-  .hero__title {
-    color: #fff; }
+      align-items: center;
+  padding-left: 3rem;
+  position: relative;
+  border-radius: 0; }
+  @media (min-width: 36em) {
+    .toggler {
+      background: #101010; } }
+  .toggler:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    left: 100%;
+    background: #101010;
+    pointer-events: none;
+    display: none; }
+    @media (min-width: 36em) {
+      .toggler:after {
+        display: block; } }
+  .toggler:hover .toggler__icon {
+    background: transparent;
+    transform: rotate(-90deg); }
+    .toggler:hover .toggler__icon:before {
+      transform: rotate(45deg); }
+    .toggler:hover .toggler__icon:after {
+      transform: rotate(-45deg); }
+
+.toggler--active .toggler__icon {
+  transform: rotate(-90deg);
+  background: transparent; }
+  .toggler--active .toggler__icon:before {
+    transform: rotate(45deg);
+    top: 0rem; }
+  .toggler--active .toggler__icon:after {
+    transform: rotate(-45deg);
+    bottom: 0rem; }
+
+.toggler__icon {
+  height: .2rem;
+  width: 2rem;
+  background: #000;
+  position: relative;
+  transition: all .3s ease-in; }
+  @media (min-width: 36em) {
+    .toggler__icon {
+      background: #fff; } }
+  .toggler__icon:before, .toggler__icon:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background: #000;
+    height: .2rem;
+    width: 2rem;
+    transition: all .3s ease-in; }
+    @media (min-width: 36em) {
+      .toggler__icon:before, .toggler__icon:after {
+        background: #fff; } }
+  .toggler__icon:before {
+    top: .6rem; }
+  .toggler__icon:after {
+    bottom: .6rem; }
+
+.toggler__text {
+  display: none;
+  padding: 1.2rem;
+  color: #fff; }
+  @media (min-width: 36em) {
+    .toggler__text {
+      display: block; } }
+
+body {
+  background: #666; }

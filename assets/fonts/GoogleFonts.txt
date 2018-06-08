@@ -1,0 +1,11 @@
+HTML
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Quicksand:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+
+CSS
+<style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Quicksand:300,400,700&subset=latin-ext');
+</style>
+
+
+font-family: 'Quicksand', sans-serif;
+font-family: 'Josefin Sans', sans-serif;

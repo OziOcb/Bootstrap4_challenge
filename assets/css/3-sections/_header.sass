@@ -19,15 +19,27 @@
   list-style: none
   margin: 0 2rem 0 0
   align-items: center
-  display: none
-
-  // 576px
-  @media (min-width: 36em)
-    display: flex
+  display: flex
 
   &__link
     color: #101010
     padding: 1rem
+
+  &--desktop
+    display: none
+
+    // 576px
+    @media (min-width: 36em)
+      display: flex
+
+  &--mobile
+    justify-content: center
+    padding: 0
+    margin: 0 0 1rem
+
+    // 576px
+    @media (min-width: 36em)
+      display: none 
 
 /* //────  ────────────────────────────────────────────────────────────────────────────────── 
   TOGGLER

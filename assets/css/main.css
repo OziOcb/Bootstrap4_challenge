@@ -563,14 +563,25 @@ body {
   margin: 0 2rem 0 0;
   -ms-flex-align: center;
       align-items: center;
-  display: none; }
-  @media (min-width: 36em) {
-    .social {
-      display: -ms-flexbox;
-      display: flex; } }
+  display: -ms-flexbox;
+  display: flex; }
   .social__link {
     color: #101010;
     padding: 1rem; }
+  .social--desktop {
+    display: none; }
+    @media (min-width: 36em) {
+      .social--desktop {
+        display: -ms-flexbox;
+        display: flex; } }
+  .social--mobile {
+    -ms-flex-pack: center;
+        justify-content: center;
+    padding: 0;
+    margin: 0 0 1rem; }
+    @media (min-width: 36em) {
+      .social--mobile {
+        display: none; } }
 
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   TOGGLER */

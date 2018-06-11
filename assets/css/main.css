@@ -413,11 +413,14 @@ h1, h2, h3, h4, h5, h6 {
 .huge, h1 {
   font-size: 6.8rem;
   line-height: 1.05;
-  letter-spacing: -1px; }
+  letter-spacing: -1px;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff; }
 
 .large, h2 {
   font-size: 4.2rem;
-  line-height: 1.14; }
+  line-height: 1.14;
+  font-family: 'Quicksand', sans-serif; }
 
 .bigger, h3 {
   font-size: 2.6rem;
@@ -430,6 +433,12 @@ h1, h2, h3, h4, h5, h6 {
 .small, small {
   font-size: 1rem;
   line-height: 1.2; }
+
+.lead {
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: light; }
 
 p {
   margin: 0 0 2rem 0; }
@@ -662,6 +671,54 @@ body {
   @media (min-width: 36em) {
     .toggler__text {
       display: block; } }
+
+.hero {
+  background-color: #090909;
+  background-image: url("/../assets/img/bg_hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .hero__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+  .hero__text-wrap {
+    text-align: center;
+    overflow: hidden; }
+  .hero__text {
+    margin-top: 11rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    position: relative;
+    display: inline-block; }
+    .hero__text:before, .hero__text:after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background: #fff;
+      top: 50%; }
+    .hero__text:before {
+      right: 100%;
+      margin-right: .5em; }
+    .hero__text:after {
+      left: 100%;
+      margin-left: .5em; }
+  .hero__title {
+    margin-top: 0;
+    margin-bottom: 12rem;
+    text-transform: uppercase;
+    font-size: 5.4rem;
+    letter-spacing: 0.03125em;
+    text-align: center; }
+  .hero__btn {
+    display: none; }
+  .hero__arrow {
+    margin-bottom: 4rem; }
 
 body {
   background: #666; }

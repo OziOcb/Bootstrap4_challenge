@@ -5,25 +5,32 @@
     size: cover
     position: 50% 50%
     repeat: no-repeat
-
-
-  &__wrapper
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
 
   &__text-wrap
     text-align: center
     overflow: hidden
+    margin: 11rem 1.5rem 4.4rem
 
+    // 816px
+    @media (min-width: 51em)
+      margin: 16rem 1.5rem 4rem
+    
   &__text
-    margin-top: 11rem
     margin-bottom: .5rem
     text-align: center
     position: relative
     display: inline-block
 
+    // 816px
+    @media (min-width: 51em)
+      margin-bottom: -.6rem
+      font-size: 3rem
+
+    // Horizontal Lines-On-Sides 
     &:before, 
     &:after
       content: ''
@@ -42,15 +49,43 @@
       margin-left: .5em
 
   &__title
-    margin-top: 0
-    margin-bottom: 12rem
+    margin: 0
     text-transform: uppercase
     font-size: 5.4rem
     letter-spacing: 0.03125em
     text-align: center
 
-  &__btn
-    display: none
+    // 816px
+    @media (min-width: 51em)
+      font-size: 7.2rem
 
-  &__arrow
+  &__btn
+    font-size: 1.4rem
+    padding-left: 1.785em
+    padding-right: 1.785em
+    text-transform: uppercase
+    border-radius: 12%/50%;
+    border-width: 2px
+    margin-bottom: 5rem
+
+    // 816px
+    @media (min-width: 51em)
+      font-size: 1.8rem
+      margin-bottom: 16rem
+      padding: .8em 3.333em
+
+  &__arrow-link
     margin-bottom: 4rem
+
+  &__arrow-image
+    animation: pulse 3s ease-in-out infinite
+
+    // 816px
+    @media (min-width: 51em)
+      height: 3rem
+
+    @keyframes pulse
+      0%, 100%
+        transform: translateY(-15%)
+      50%
+        transform: translateY(15%)

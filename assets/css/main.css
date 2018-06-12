@@ -677,25 +677,31 @@ body {
   background-image: url("../img/bg_hero.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat; }
-  .hero__wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center; }
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
   .hero__text-wrap {
     text-align: center;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 11rem 1.5rem 4.4rem; }
+    @media (min-width: 51em) {
+      .hero__text-wrap {
+        margin: 16rem 1.5rem 4rem; } }
   .hero__text {
-    margin-top: 11rem;
     margin-bottom: .5rem;
     text-align: center;
     position: relative;
     display: inline-block; }
+    @media (min-width: 51em) {
+      .hero__text {
+        margin-bottom: -.6rem;
+        font-size: 3rem; } }
     .hero__text:before, .hero__text:after {
       content: '';
       position: absolute;
@@ -710,16 +716,40 @@ body {
       left: 100%;
       margin-left: .5em; }
   .hero__title {
-    margin-top: 0;
-    margin-bottom: 12rem;
+    margin: 0;
     text-transform: uppercase;
     font-size: 5.4rem;
     letter-spacing: 0.03125em;
     text-align: center; }
+    @media (min-width: 51em) {
+      .hero__title {
+        font-size: 7.2rem; } }
   .hero__btn {
-    display: none; }
-  .hero__arrow {
+    font-size: 1.4rem;
+    padding-left: 1.785em;
+    padding-right: 1.785em;
+    text-transform: uppercase;
+    border-radius: 12%/50%;
+    border-width: 2px;
+    margin-bottom: 5rem; }
+    @media (min-width: 51em) {
+      .hero__btn {
+        font-size: 1.8rem;
+        margin-bottom: 16rem;
+        padding: .8em 3.333em; } }
+  .hero__arrow-link {
     margin-bottom: 4rem; }
+  .hero__arrow-image {
+    animation: pulse 3s ease-in-out infinite; }
+    @media (min-width: 51em) {
+      .hero__arrow-image {
+        height: 3rem; } }
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateY(-15%); }
+  50% {
+    transform: translateY(15%); } }
 
 body {
   background: #666; }

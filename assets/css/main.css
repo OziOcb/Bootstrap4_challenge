@@ -674,8 +674,9 @@ body {
 
 .hero {
   background-color: #090909;
-  background-image: url("/../assets/img/bg_hero.jpg");
+  background-image: url("../img/bg_hero.jpg");
   background-size: cover;
+  background-position: 50% 50%;
   background-repeat: no-repeat; }
   .hero__wrapper {
     display: -ms-flexbox;

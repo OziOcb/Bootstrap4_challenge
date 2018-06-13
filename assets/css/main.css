@@ -493,7 +493,7 @@ body {
   background: #F6F6F8;
   font-size: 1.6rem;
   line-height: 1.6;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -751,5 +751,23 @@ body {
   50% {
     transform: translateY(15%); } }
 
-body {
-  background: #666; }
+.growth__wrapper {
+  margin-top: 4rem; }
+
+.growth__col {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center; }
+
+.growth__indicator {
+  margin-bottom: 2rem;
+  transform: rotate(145deg); }
+
+.growth__text {
+  max-width: 20rem;
+  margin-bottom: 4rem;
+  font-size: 1.8rem; }

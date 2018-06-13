@@ -18,3 +18,44 @@ for(i = 0; i < navigationLink.length; i++) {
     document.getElementById('main-navi-toggler').classList.remove('toggler--active');
   }, false)
 };
+
+
+// Radial Indicators
+var radialObj1 = radialIndicator('#indicatorContainer1', {
+  barColor : '#f34739',
+  barBgColor: '#e5e3e3',
+  barWidth : 6,
+  initValue : 0,
+  radius: 105,
+  roundCorner: true,
+  displayNumber: false,
+  frameTime: 1
+}); 
+
+radialObj1.animate(50);
+
+var radialObj2 = radialIndicator('#indicatorContainer2', {
+  barColor : '#009989',
+  barBgColor: '#e5e3e3',
+  barWidth : 6,
+  initValue : 0,
+  radius: 105,
+  roundCorner: true,
+  displayNumber: false,
+  frameTime: 1
+}); 
+
+radialObj2.animate(35);
+
+var radialObj3 = radialIndicator('#indicatorContainer3', {
+  barColor : '#152b3c',
+  barBgColor: '#e5e3e3',
+  barWidth : 6,
+  initValue : 0,
+  radius: 105,
+  roundCorner: true,
+  displayNumber: false,
+  frameTime: 1
+}); 
+
+radialObj3.animate(80);

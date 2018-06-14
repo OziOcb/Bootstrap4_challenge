@@ -9,11 +9,42 @@
     align-items: center
     text-align: center
 
-  &__indicator
-    margin-bottom: 2rem
-    transform: rotate(145deg)
-
   &__text
     max-width: 20rem
     margin-bottom: 4rem
     font-size: 1.8rem
+
+.indicator
+  margin-bottom: 2rem
+  transform: rotate(145deg)
+  
+  &-wrap
+    position: relative
+
+  &__text
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -52%)
+    display: flex
+    flex-direction: column
+
+  &__number
+    font-size: 7.2rem
+    font-weight: bold
+
+  &__desc
+    text-transform: uppercase
+    transform: translateY(-100%)
+    font-size: 1.8rem
+    width: 200px
+
+// Colors for the numbers inside indicators
+.growth__col:nth-child(1) .indicator__number
+  color: $indicator1
+
+.growth__col:nth-child(2) .indicator__number
+  color: $indicator2
+
+.growth__col:nth-child(3) .indicator__number
+  color: $indicator3

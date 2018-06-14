@@ -763,11 +763,39 @@ body {
       align-items: center;
   text-align: center; }
 
-.growth__indicator {
-  margin-bottom: 2rem;
-  transform: rotate(145deg); }
-
 .growth__text {
   max-width: 20rem;
   margin-bottom: 4rem;
   font-size: 1.8rem; }
+
+.indicator {
+  margin-bottom: 2rem;
+  transform: rotate(145deg); }
+  .indicator-wrap {
+    position: relative; }
+  .indicator__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .indicator__number {
+    font-size: 7.2rem;
+    font-weight: bold; }
+  .indicator__desc {
+    text-transform: uppercase;
+    transform: translateY(-100%);
+    font-size: 1.8rem;
+    width: 200px; }
+
+.growth__col:nth-child(1) .indicator__number {
+  color: #f34739; }
+
+.growth__col:nth-child(2) .indicator__number {
+  color: #009989; }
+
+.growth__col:nth-child(3) .indicator__number {
+  color: #152b3c; }

@@ -752,7 +752,12 @@ body {
     transform: translateY(15%); } }
 
 .growth__wrapper {
-  margin-top: 4rem; }
+  margin-top: 3.3rem;
+  margin-bottom: 4rem; }
+  @media (min-width: 51em) {
+    .growth__wrapper {
+      margin-top: 4.3rem;
+      margin-bottom: 8rem; } }
 
 .growth__col {
   display: -ms-flexbox;
@@ -767,10 +772,16 @@ body {
   max-width: 20rem;
   margin-bottom: 4rem;
   font-size: 1.8rem; }
+  @media (min-width: 51em) {
+    .growth__text {
+      margin-bottom: 0; } }
 
 .indicator {
   margin-bottom: 2rem;
   transform: rotate(145deg); }
+  @media (min-width: 51em) {
+    .indicator {
+      margin-bottom: 3rem; } }
   .indicator-wrap {
     position: relative; }
   .indicator__text {

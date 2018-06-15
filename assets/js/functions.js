@@ -20,7 +20,9 @@ for(i = 0; i < navigationLink.length; i++) {
 };
 
 
-// Radial Indicators
+/* //────  ──────────────────────────────────────────────────────────────────────────────────
+  RADIAL INDICATORS
+//────  ────────────────────────────────────────────────────────────────────────────────── */
 var radialObj1 = radialIndicator('#indicatorContainer1', {
   barColor : '#f34739',
   barBgColor: '#e5e3e3',

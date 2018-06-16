@@ -785,7 +785,14 @@ body {
   color: #152b3c; }
 
 .meet-us {
-  background-color: #000000; }
+  background-color: #000000;
+  background-image: url("../img/bg_our-team.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+  .meet-us .container {
+    display: -ms-flexbox;
+    display: flex; }
 
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   LEAD */
@@ -822,3 +829,17 @@ body {
     letter-spacing: 0.03125em;
     text-align: center;
     color: #fff; }
+  .lead--border {
+    border: 2px solid #fff;
+    -ms-flex: 1;
+        flex: 1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem; }
+    @media (min-width: 51em) {
+      .lead--border {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding-top: 6.2rem;
+        padding-bottom: 6.2rem; } }

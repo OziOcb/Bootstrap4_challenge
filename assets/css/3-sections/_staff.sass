@@ -1,0 +1,35 @@
+.member
+
+  &__info
+    border: 3px solid #000
+    border-bottom: none
+    margin: 2rem 1.5rem 0 //change 0 if borders wont stick together
+    text-align: center
+    font-family: 'Quicksand', sans-serif
+
+  &__name
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 3.6rem
+    color: #000
+    margin-top: 3.5rem
+    margin-bottom: -.4rem
+
+  &__role
+    font-weight: bold
+    padding-bottom: 1.5rem
+    position: relative
+    
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      height: .3rem
+      width: 18rem
+      background: $member-underline
+
+  &__desc
+    margin-bottom: 4.5rem
+

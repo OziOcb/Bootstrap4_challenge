@@ -794,6 +794,38 @@ body {
     display: -ms-flexbox;
     display: flex; }
 
+.member__info {
+  border: 3px solid #000;
+  border-bottom: none;
+  margin: 2rem 1.5rem 0;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif; }
+
+.member__name {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.6rem;
+  color: #000;
+  margin-top: 3.5rem;
+  margin-bottom: -.4rem; }
+
+.member__role {
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+  position: relative; }
+  .member__role:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: .3rem;
+    width: 18rem;
+    background: #f34739; }
+
+.member__desc {
+  margin-bottom: 4.5rem; }
+
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   LEAD */
 .lead {

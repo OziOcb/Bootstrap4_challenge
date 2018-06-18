@@ -795,11 +795,13 @@ body {
     display: flex; }
 
 .staff {
-  padding-top: 2.5rem; }
+  padding-top: 2.5rem;
+  margin-bottom: 4rem; }
   @media (min-width: 48.0625em) {
     .staff {
       padding-top: 5rem; } }
 
+/* Member Info */
 .member__info {
   text-align: center;
   font-family: 'Quicksand', sans-serif; }
@@ -807,9 +809,9 @@ body {
     .member__info {
       padding-right: 0; } }
   .member__info-border {
+    margin: 2rem 0 0;
     border: 3px solid #000;
-    border-bottom: none;
-    margin: 2rem 0 0; }
+    border-bottom: none; }
     @media (min-width: 48.0625em) {
       .member__info-border {
         margin: 2rem 0;
@@ -821,7 +823,7 @@ body {
   font-weight: 400;
   font-size: 3.6rem;
   color: #000;
-  margin-top: 3.5rem;
+  margin-top: 4rem;
   margin-bottom: -.4rem; }
 
 .member__role {
@@ -844,11 +846,13 @@ body {
   font-size: 2rem;
   line-height: 1.1; }
 
+/* Member Image */
 .member__image {
   min-height: 24rem;
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+  position: relative;
   background-color: #000;
   background-image: url("../img/team/team_adrianna.jpg");
   background-size: cover;
@@ -860,6 +864,23 @@ body {
     background-image: url("../img/team/team_taylor.jpg"); }
   .member__image--thomas-bg {
     background-image: url("../img/team/team_thomas.jpg"); }
+  .member__image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 4rem solid #F6F6F8;
+    border-right: 3rem solid transparent;
+    border-left: 3rem solid transparent;
+    border-bottom: 3rem solid transparent; }
+    @media (min-width: 48.0625em) {
+      .member__image:after {
+        top: 50%;
+        left: 0;
+        transform: translate(0%, -50%);
+        border-left: 4rem solid #F6F6F8;
+        border-top: 3rem solid transparent; } }
   .member__image-border {
     border: 3px solid #fff;
     border-top: none;
@@ -877,24 +898,23 @@ body {
     -ms-flex-order: 2;
         order: 2;
     padding-right: 1.5rem;
-    padding-left: 0; } }
-
-@media (min-width: 48.0625em) {
-  .member--reverse .member__info-border {
-    border-right: 3px solid #000;
-    border-left: none; } }
-
-@media (min-width: 48.0625em) {
+    padding-left: 0; }
+    .member--reverse .member__info-border {
+      border-right: 3px solid #000;
+      border-left: none; }
   .member--reverse .member__image {
     -ms-flex-order: 1;
-        order: 1; } }
-
-@media (min-width: 48.0625em) {
-  .member--reverse .member__image-border {
-    margin-left: 1.5rem;
-    margin-right: 0;
-    border-left: 3px solid #fff;
-    border-right: none; } }
+        order: 1; }
+    .member--reverse .member__image:after {
+      left: auto;
+      right: 0;
+      border-left: 3rem solid transparent;
+      border-right: 4rem solid #F6F6F8; }
+    .member--reverse .member__image-border {
+      margin-left: 1.5rem;
+      margin-right: 0;
+      border-left: 3px solid #fff;
+      border-right: none; } }
 
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   LEAD */

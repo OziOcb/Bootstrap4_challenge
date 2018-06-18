@@ -1,9 +1,11 @@
 .staff
   padding-top: 2.5rem
+  margin-bottom: 4rem
   //769
   @media (min-width: 48.0625em)
     padding-top: 5rem
 
+/* Member Info */
 .member
   &__info
     text-align: center
@@ -13,9 +15,9 @@
       padding-right: 0
 
     &-border
+      margin: 2rem 0 0 //change 0 if borders wont stick together
       border: 3px solid #000
       border-bottom: none
-      margin: 2rem 0 0 //change 0 if borders wont stick together
 
       //769
       @media (min-width: 48.0625em)
@@ -28,7 +30,7 @@
     font-weight: 400
     font-size: 3.6rem
     color: #000
-    margin-top: 3.5rem
+    margin-top: 4rem
     margin-bottom: -.4rem
 
   &__role
@@ -52,10 +54,12 @@
     font-size: 2rem
     line-height: 1.1
 
+/* Member Image */
 .member__image
   min-height: 24rem
   display: flex
   padding: 0
+  position: relative
   background:
     color: #000
     image: url("../img/team/team_adrianna.jpg")
@@ -71,6 +75,25 @@
 
   &--thomas-bg
     background-image: url("../img/team/team_thomas.jpg")
+  
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    border-top: $member-border-triangle
+    border-right: $member-border-transparent
+    border-left: $member-border-transparent
+    border-bottom: $member-border-transparent
+
+    //769
+    @media (min-width: 48.0625em)
+      top: 50%
+      left: 0
+      transform: translate(0%, -50%)
+      border-left: $member-border-triangle
+      border-top: $member-border-transparent
 
   &-border
     border: 3px solid #fff
@@ -85,30 +108,29 @@
       border-top: 3px solid #fff
       border-left: none
 
+//──── .member--reverse ──────────────────────────────────────────────────────────────────────────────────
 .member--reverse
-  .member
-    &__info
-      //769
-      @media (min-width: 48.0625em)
-        order: 2
-        padding-right: 1.5rem
-        padding-left: 0
+  //769
+  @media (min-width: 48.0625em)
+    .member__info
+      order: 2
+      padding-right: 1.5rem
+      padding-left: 0
 
       &-border
-        //769
-        @media (min-width: 48.0625em)
-          border-right: 3px solid #000
-          border-left: none
+        border-right: 3px solid #000
+        border-left: none
 
-    &__image
-      //769
-      @media (min-width: 48.0625em)
-        order: 1
-    
+    .member__image
+      order: 1
+      &:after
+        left: auto
+        right: 0
+        border-left: $member-border-transparent
+        border-right: $member-border-triangle
+
       &-border
-        //769
-        @media (min-width: 48.0625em)
-          margin-left: 1.5rem
-          margin-right: 0
-          border-left: 3px solid #fff
-          border-right: none
+        margin-left: 1.5rem
+        margin-right: 0
+        border-left: 3px solid #fff
+        border-right: none

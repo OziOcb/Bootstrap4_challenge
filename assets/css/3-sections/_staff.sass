@@ -6,18 +6,22 @@
 
 .member
   &__info
-    border: 3px solid #000
-    border-bottom: none
-    margin: 2rem 1.5rem 0 //change 0 if borders wont stick together
     text-align: center
     font-family: 'Quicksand', sans-serif
-
     //769
     @media (min-width: 48.0625em)
-      margin: 2rem 0
-      border-bottom: 3px solid #000
-      border-left: none
-      order: 2
+      padding-right: 0
+
+    &-border
+      border: 3px solid #000
+      border-bottom: none
+      margin: 2rem 0 0 //change 0 if borders wont stick together
+
+      //769
+      @media (min-width: 48.0625em)
+        margin: 2rem 0
+        border-bottom: 3px solid #000
+        border-right: none
 
   &__name
     text-transform: uppercase
@@ -43,7 +47,8 @@
       background: $member-underline
 
   &__desc
-    margin-bottom: 4.5rem
+    padding-bottom: 4.5rem
+    margin-bottom: 0
     font-size: 2rem
     line-height: 1.1
 
@@ -57,6 +62,15 @@
     size: cover
     position: 50% 50%
     repeat: no-repeat
+  
+  &--olivia-bg
+    background-image: url("../img/team/team_olivia.jpg")
+
+  &--taylor-bg
+    background-image: url("../img/team/team_taylor.jpg")
+
+  &--thomas-bg
+    background-image: url("../img/team/team_thomas.jpg")
 
   &-border
     border: 3px solid #fff
@@ -67,7 +81,34 @@
     //769
     @media (min-width: 48.0625em)
       margin-top: 2rem
-      margin-right: 0
+      margin-left: 0
       border-top: 3px solid #fff
-      border-right: none
-      order: 1
+      border-left: none
+
+.member--reverse
+  .member
+    &__info
+      //769
+      @media (min-width: 48.0625em)
+        order: 2
+        padding-right: 1.5rem
+        padding-left: 0
+
+      &-border
+        //769
+        @media (min-width: 48.0625em)
+          border-right: 3px solid #000
+          border-left: none
+
+    &__image
+      //769
+      @media (min-width: 48.0625em)
+        order: 1
+    
+      &-border
+        //769
+        @media (min-width: 48.0625em)
+          margin-left: 1.5rem
+          margin-right: 0
+          border-left: 3px solid #fff
+          border-right: none

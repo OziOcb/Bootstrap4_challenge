@@ -801,18 +801,20 @@ body {
       padding-top: 5rem; } }
 
 .member__info {
-  border: 3px solid #000;
-  border-bottom: none;
-  margin: 2rem 1.5rem 0;
   text-align: center;
   font-family: 'Quicksand', sans-serif; }
   @media (min-width: 48.0625em) {
     .member__info {
-      margin: 2rem 0;
-      border-bottom: 3px solid #000;
-      border-left: none;
-      -ms-flex-order: 2;
-          order: 2; } }
+      padding-right: 0; } }
+  .member__info-border {
+    border: 3px solid #000;
+    border-bottom: none;
+    margin: 2rem 0 0; }
+    @media (min-width: 48.0625em) {
+      .member__info-border {
+        margin: 2rem 0;
+        border-bottom: 3px solid #000;
+        border-right: none; } }
 
 .member__name {
   text-transform: uppercase;
@@ -837,7 +839,8 @@ body {
     background: #f34739; }
 
 .member__desc {
-  margin-bottom: 4.5rem;
+  padding-bottom: 4.5rem;
+  margin-bottom: 0;
   font-size: 2rem;
   line-height: 1.1; }
 
@@ -851,6 +854,12 @@ body {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat; }
+  .member__image--olivia-bg {
+    background-image: url("../img/team/team_olivia.jpg"); }
+  .member__image--taylor-bg {
+    background-image: url("../img/team/team_taylor.jpg"); }
+  .member__image--thomas-bg {
+    background-image: url("../img/team/team_thomas.jpg"); }
   .member__image-border {
     border: 3px solid #fff;
     border-top: none;
@@ -859,11 +868,33 @@ body {
     @media (min-width: 48.0625em) {
       .member__image-border {
         margin-top: 2rem;
-        margin-right: 0;
+        margin-left: 0;
         border-top: 3px solid #fff;
-        border-right: none;
-        -ms-flex-order: 1;
-            order: 1; } }
+        border-left: none; } }
+
+@media (min-width: 48.0625em) {
+  .member--reverse .member__info {
+    -ms-flex-order: 2;
+        order: 2;
+    padding-right: 1.5rem;
+    padding-left: 0; } }
+
+@media (min-width: 48.0625em) {
+  .member--reverse .member__info-border {
+    border-right: 3px solid #000;
+    border-left: none; } }
+
+@media (min-width: 48.0625em) {
+  .member--reverse .member__image {
+    -ms-flex-order: 1;
+        order: 1; } }
+
+@media (min-width: 48.0625em) {
+  .member--reverse .member__image-border {
+    margin-left: 1.5rem;
+    margin-right: 0;
+    border-left: 3px solid #fff;
+    border-right: none; } }
 
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   LEAD */

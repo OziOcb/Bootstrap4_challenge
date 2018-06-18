@@ -1,11 +1,23 @@
-.member
+.staff
+  padding-top: 2.5rem
+  //769
+  @media (min-width: 48.0625em)
+    padding-top: 5rem
 
+.member
   &__info
     border: 3px solid #000
     border-bottom: none
     margin: 2rem 1.5rem 0 //change 0 if borders wont stick together
     text-align: center
     font-family: 'Quicksand', sans-serif
+
+    //769
+    @media (min-width: 48.0625em)
+      margin: 2rem 0
+      border-bottom: 3px solid #000
+      border-left: none
+      order: 2
 
   &__name
     text-transform: uppercase
@@ -32,4 +44,30 @@
 
   &__desc
     margin-bottom: 4.5rem
+    font-size: 2rem
+    line-height: 1.1
 
+.member__image
+  min-height: 24rem
+  display: flex
+  padding: 0
+  background:
+    color: #000
+    image: url("../img/team/team_adrianna.jpg")
+    size: cover
+    position: 50% 50%
+    repeat: no-repeat
+
+  &-border
+    border: 3px solid #fff
+    border-top: none
+    margin: 0 1.5rem 2rem
+    width: 100%
+
+    //769
+    @media (min-width: 48.0625em)
+      margin-top: 2rem
+      margin-right: 0
+      border-top: 3px solid #fff
+      border-right: none
+      order: 1

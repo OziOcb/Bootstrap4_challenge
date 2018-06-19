@@ -916,6 +916,18 @@ body {
       border-left: 3px solid #fff;
       border-right: none; } }
 
+.portfolio {
+  background-color: #000000;
+  background-image: url("../img/bg_portfolio.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+  .portfolio .container {
+    display: -ms-flexbox;
+    display: flex; }
+  .portfolio .lead__text:before, .portfolio .lead__text:after {
+    width: 2.5rem; }
+
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   LEAD */
 .lead {

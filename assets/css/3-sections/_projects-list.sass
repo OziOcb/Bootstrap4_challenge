@@ -3,15 +3,37 @@
   width: 33.3333%
   height: 33vw
   filter: grayscale(1) opacity(.5)
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
   transition: all .3s ease-in-out
   background: 
-      color: #000
-      size: cover
-      position: 50% 50%
+    color: #000
+    size: cover
+    position: 50% 50%
+    repeat: no-repeat
+
+  &:after
+    content: '- our new project! -'
+    color: #000
+    height: 60%
+    line-height: 8
+    opacity: 0
+    transition: all .3s ease-in-out
+    background: 
+      image: url('../img/project_eye.svg')
+      size: 40px 50px
+      position: 50% 20%
       repeat: no-repeat
 
-  &:hover
-    filter: grayscale(0) opacity(1)
+  @media (hover: hover)
+    &:hover
+      filter: grayscale(0) opacity(1)
+      text-decoration: none
+
+      &:after
+        opacity: 1
 
   /* Modificators */
   &--1-1
@@ -73,7 +95,7 @@
     height: 25vw
 
     &:nth-child(4)
-      display: block
+      display: flex
 
 // 640 - base on single item max width = 160px
 @media (min-width: 40em)
@@ -82,7 +104,7 @@
     height: 20vw
 
     &:nth-child(5)
-      display: block
+      display: flex
   
 // 800 - base on single item max width = 160px
 @media (min-width: 50em)
@@ -91,7 +113,7 @@
     height: 16.6666666667vw
 
     &:nth-child(6)
-      display: block
+      display: flex
 
 // 960 - base on single item max width = 160px
 @media (min-width: 60em)
@@ -100,4 +122,4 @@
     height: 14.2857142857vw
 
     &:nth-child(7)
-      display: block
+      display: flex

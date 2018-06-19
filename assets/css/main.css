@@ -926,7 +926,7 @@ body {
     display: -ms-flexbox;
     display: flex; }
   .portfolio .lead__text:before, .portfolio .lead__text:after {
-    width: 2.5rem; }
+    width: 3.7rem; }
 
 /* Base */
 .projects__item {
@@ -1043,6 +1043,18 @@ body {
     .projects__item:nth-child(7) {
       display: -ms-flexbox;
       display: flex; } }
+
+.brands {
+  background-color: #000000;
+  background-image: url("../img/bg_brands.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+  .brands .container {
+    display: -ms-flexbox;
+    display: flex; }
+  .brands .lead__text:before, .brands .lead__text:after {
+    width: 2.9rem; }
 
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   LEAD */

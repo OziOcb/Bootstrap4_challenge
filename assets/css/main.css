@@ -1012,10 +1012,57 @@ body {
 
 .portfolio {
   background-color: #000000;
-  background-image: url("../img/bg_portfolio.jpg");
+  background-image: url("../img/bgs/portfolio/375x200@2x.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  /* Media Queries for the responsive background */
+  /* END of Media Queries for the responsive background */ }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/375x200@2x.jpg"); } }
+  @media (min-width: 23.5em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/576x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 23.5em), (min-resolution: 192dpi) and (min-width: 23.5em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/576x200@2x.jpg"); } }
+  @media (min-width: 36em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/768x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), (min-resolution: 192dpi) and (min-width: 36em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/768x200@2x.jpg"); } }
+  @media (min-width: 48em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/816x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-resolution: 192dpi) and (min-width: 48em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/816x200@2x.jpg"); } }
+  @media (min-width: 51em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/992x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 51em), (min-resolution: 192dpi) and (min-width: 51em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/992x300@2x.jpg"); } }
+  @media (min-width: 62em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/1200x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 62em), (min-resolution: 192dpi) and (min-width: 62em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/1200x300@2x.jpg"); } }
+  @media (min-width: 75em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/1600x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/1600x300@2x.jpg"); } }
+  @media (min-width: 100em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/maxx300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 100em), (min-resolution: 192dpi) and (min-width: 100em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/maxx300@2x.jpg"); } }
   .portfolio .container {
     display: -ms-flexbox;
     display: flex; }
@@ -1140,10 +1187,57 @@ body {
 
 .brands {
   background-color: #000000;
-  background-image: url("../img/bg_brands.jpg");
+  background-image: url("../img/bgs/brands/375x200.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  /* Media Queries for the responsive background */
+  /* END of Media Queries for the responsive background */ }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .brands {
+      background-image: url("../img/bgs/brands/375x200@2x.jpg"); } }
+  @media (min-width: 23.5em) {
+    .brands {
+      background-image: url("../img/bgs/brands/576x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 23.5em), (min-resolution: 192dpi) and (min-width: 23.5em) {
+    .brands {
+      background-image: url("../img/bgs/brands/576x200@2x.jpg"); } }
+  @media (min-width: 36em) {
+    .brands {
+      background-image: url("../img/bgs/brands/768x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), (min-resolution: 192dpi) and (min-width: 36em) {
+    .brands {
+      background-image: url("../img/bgs/brands/768x200@2x.jpg"); } }
+  @media (min-width: 48em) {
+    .brands {
+      background-image: url("../img/bgs/brands/816x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-resolution: 192dpi) and (min-width: 48em) {
+    .brands {
+      background-image: url("../img/bgs/brands/816x200@2x.jpg"); } }
+  @media (min-width: 51em) {
+    .brands {
+      background-image: url("../img/bgs/brands/992x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 51em), (min-resolution: 192dpi) and (min-width: 51em) {
+    .brands {
+      background-image: url("../img/bgs/brands/992x300@2x.jpg"); } }
+  @media (min-width: 62em) {
+    .brands {
+      background-image: url("../img/bgs/brands/1200x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 62em), (min-resolution: 192dpi) and (min-width: 62em) {
+    .brands {
+      background-image: url("../img/bgs/brands/1200x300@2x.jpg"); } }
+  @media (min-width: 75em) {
+    .brands {
+      background-image: url("../img/bgs/brands/1600x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em) {
+    .brands {
+      background-image: url("../img/bgs/brands/1600x300@2x.jpg"); } }
+  @media (min-width: 100em) {
+    .brands {
+      background-image: url("../img/bgs/brands/maxx300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 100em), (min-resolution: 192dpi) and (min-width: 100em) {
+    .brands {
+      background-image: url("../img/bgs/brands/maxx300@2x.jpg"); } }
   .brands .container {
     display: -ms-flexbox;
     display: flex; }

@@ -1,10 +1,79 @@
 .portfolio
   background:
     color: #000000
-    image: url("../img/bg_portfolio.jpg")
+    image: url("../img/bgs/portfolio/375x200@2x.jpg")
     size: cover
     position: 50% 50%
     repeat: no-repeat
+
+  /* Media Queries for the responsive background */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    background:
+      image: url("../img/bgs/portfolio/375x200@2x.jpg")
+
+  // 376px
+  @media (min-width: 23.5em)
+    background:
+      image: url("../img/bgs/portfolio/576x200.jpg")
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 23.5em)
+    background:
+      image: url("../img/bgs/portfolio/576x200@2x.jpg")
+
+  // 576px
+  @media (min-width: 36em)
+    background:
+      image: url("../img/bgs/portfolio/768x200.jpg")
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 36em)
+    background:
+      image: url("../img/bgs/portfolio/768x200@2x.jpg")
+
+  // 768px
+  @media (min-width: 48em)
+    background:
+      image: url("../img/bgs/portfolio/816x200.jpg")
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 48em)
+    background:
+      image: url("../img/bgs/portfolio/816x200@2x.jpg")
+
+  // 816px
+  @media (min-width: 51em)
+    background:
+      image: url("../img/bgs/portfolio/992x300.jpg")
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 51em)
+    background:
+      image: url("../img/bgs/portfolio/992x300@2x.jpg")
+
+  // 992px
+  @media (min-width: 62em)
+    background:
+      image: url("../img/bgs/portfolio/1200x300.jpg")
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 62em)
+    background:
+      image: url("../img/bgs/portfolio/1200x300@2x.jpg")
+
+  // 1200px
+  @media (min-width: 75em)
+    background:
+      image: url("../img/bgs/portfolio/1600x300.jpg")
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 75em)
+    background:
+      image: url("../img/bgs/portfolio/1600x300@2x.jpg")
+
+  // 1600px
+  @media (min-width: 100em)
+    background:
+      image: url("../img/bgs/portfolio/maxx300.jpg")
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 100em)
+    background:
+      image: url("../img/bgs/portfolio/maxx300@2x.jpg")
+  /* END of Media Queries for the responsive background */
 
   .container
     display: flex

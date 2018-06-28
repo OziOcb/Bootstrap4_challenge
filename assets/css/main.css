@@ -667,11 +667,6 @@ body {
       display: block; } }
 
 .hero {
-  background-color: #090909;
-  background-image: url("../img/bg_hero.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -679,7 +674,59 @@ body {
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  background-color: #090909;
+  background-image: url("../img/bgs/hero/375x460.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  /* Media Queries for the responsive background */
+  /* END of Media Queries for the responsive background */ }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero {
+      background-image: url("../img/bgs/hero/375x460@2x.jpg"); } }
+  @media (min-width: 23.5em) {
+    .hero {
+      background-image: url("../img/bgs/hero/576x400.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 23.5em), (min-resolution: 192dpi) and (min-width: 23.5em) {
+    .hero {
+      background-image: url("../img/bgs/hero/576x400@2x.jpg"); } }
+  @media (min-width: 36em) {
+    .hero {
+      background-image: url("../img/bgs/hero/768x400.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), (min-resolution: 192dpi) and (min-width: 36em) {
+    .hero {
+      background-image: url("../img/bgs/hero/768x400@2x.jpg"); } }
+  @media (min-width: 48em) {
+    .hero {
+      background-image: url("../img/bgs/hero/816x400.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-resolution: 192dpi) and (min-width: 48em) {
+    .hero {
+      background-image: url("../img/bgs/hero/816x400@2x.jpg"); } }
+  @media (min-width: 51em) {
+    .hero {
+      background-image: url("../img/bgs/hero/992x620.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 51em), (min-resolution: 192dpi) and (min-width: 51em) {
+    .hero {
+      background-image: url("../img/bgs/hero/992x620@2x.jpg"); } }
+  @media (min-width: 62em) {
+    .hero {
+      background-image: url("../img/bgs/hero/1200x620.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 62em), (min-resolution: 192dpi) and (min-width: 62em) {
+    .hero {
+      background-image: url("../img/bgs/hero/1200x620@2x.jpg"); } }
+  @media (min-width: 75em) {
+    .hero {
+      background-image: url("../img/bgs/hero/1600x620.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em) {
+    .hero {
+      background-image: url("../img/bgs/hero/1600x620@2x.jpg"); } }
+  @media (min-width: 100em) {
+    .hero {
+      background-image: url("../img/bgs/hero/maxx620.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 100em), (min-resolution: 192dpi) and (min-width: 100em) {
+    .hero {
+      background-image: url("../img/bgs/hero/maxx620@2x.jpg"); } }
   .hero__btn {
     font-size: 1.4rem;
     padding-left: 1.785em;
@@ -786,10 +833,57 @@ body {
 
 .meet-us {
   background-color: #000000;
-  background-image: url("../img/bg_our-team.jpg");
+  background-image: url("../img/bgs/our-team/375x200.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  /* Media Queries for the responsive background */
+  /* END of Media Queries for the responsive background */ }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/375x200@2x.jpg"); } }
+  @media (min-width: 23.5em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/576x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 23.5em), (min-resolution: 192dpi) and (min-width: 23.5em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/576x200@2x.jpg"); } }
+  @media (min-width: 36em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/768x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), (min-resolution: 192dpi) and (min-width: 36em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/768x200@2x.jpg"); } }
+  @media (min-width: 48em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/816x200.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (min-resolution: 192dpi) and (min-width: 48em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/816x200@2x.jpg"); } }
+  @media (min-width: 51em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/992x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 51em), (min-resolution: 192dpi) and (min-width: 51em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/992x300@2x.jpg"); } }
+  @media (min-width: 62em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/1200x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 62em), (min-resolution: 192dpi) and (min-width: 62em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/1200x300@2x.jpg"); } }
+  @media (min-width: 75em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/1600x300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/1600x300@2x.jpg"); } }
+  @media (min-width: 100em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/maxx300.jpg"); } }
+  @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 100em), (min-resolution: 192dpi) and (min-width: 100em) {
+    .meet-us {
+      background-image: url("../img/bgs/our-team/maxx300@2x.jpg"); } }
   .meet-us .container {
     display: -ms-flexbox;
     display: flex; }

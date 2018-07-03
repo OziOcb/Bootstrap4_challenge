@@ -1,7 +1,7 @@
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   Art Directory
 //────  ────────────────────────────────────────────────────────────────────────────────── */
-
+/* Breake Points used in the artMediaQuery mixin */
 $xs: 23.5em
 $sm: 36em
 $md-secondary: 48em
@@ -10,55 +10,40 @@ $lg: 62em
 $xl: 75em
 $max: 100em
 
-=bgImage($Name, $width, $height, $ratio)
-  background-image: url("../img/bgs/#{$Name}/#{$width}x#{$height}#{$ratio}.jpg")
+/* Dynamic Background Image url address, used in the artMediaQuery mixin */
+=artBgImage($Name, $width, $height, $ratio, $folder)
+  background-image: url("../img/#{$folder}#{$Name}/#{$width}x#{$height}#{$ratio}.jpg")
 
-
-=mediaQuery($imageName, $breakPoint: 1em, $imageWidth: 375, $imageHeight: 200, $imageRatio: '')
+/* Media Queries mixin for both normal and retina displays */
+=artMediaQuery($imageName, $breakPoint: 1em, $imageWidth: 375, $imageHeight: 200, $imageFolder: 'bgs/')
+  // normal resolution
   @media (min-width: $breakPoint)
-    @include bgImage($imageName, $imageWidth, $imageHeight, $imageRatio)
+    @include artBgImage($imageName, $imageWidth, $imageHeight, '', $imageFolder)
     @content
-
-
-=mediaQueryRetina($imageName, $breakPoint: 1em, $imageWidth: 375, $imageHeight: 200, $imageRatio: '@2x')
+  // retina resolution
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: $breakPoint)
-    @include bgImage($imageName, $imageWidth, $imageHeight, $imageRatio)
+    @include artBgImage($imageName, $imageWidth, $imageHeight, '@2x', $imageFolder)
     @content
-
 
 
 /* Art Directory Mixin */
-=art-direct($artDirName, $mobileHeight: 200, $desktopHeight: 300)
+=artDirect($artDirName, $mobileHeight: 200, $desktopHeight: 300, $artFolder: 'bgs/')
   .#{$artDirName}
     background:
       color: #000000
-      image: url("../img/bgs/#{$artDirName}/375x200.jpg")
       size: cover
       position: 50% 50%
       repeat: no-repeat
+      
+    @include artMediaQuery($artDirName, $imageFolder: $artFolder)
+    @include artMediaQuery($artDirName, $xs, 576, $mobileHeight, $artFolder)
+    @include artMediaQuery($artDirName, $sm, 768, $mobileHeight, $artFolder) 
+    @include artMediaQuery($artDirName, $md-secondary, 816, $mobileHeight, $artFolder)
 
-    @include mediaQueryRetina($artDirName)
-
-    @include mediaQuery($artDirName, $xs, 576, $mobileHeight) 
-    @include mediaQueryRetina($artDirName, $xs, 576, $mobileHeight) 
-
-    @include mediaQuery($artDirName, $sm, 768, $mobileHeight) 
-    @include mediaQueryRetina($artDirName, $sm, 768, $mobileHeight) 
-
-    @include mediaQuery($artDirName, $md-secondary, 816, $mobileHeight) 
-    @include mediaQueryRetina($artDirName, $md-secondary, 816, $mobileHeight) 
-
-    @include mediaQuery($artDirName, $md, 992, $desktopHeight) 
-    @include mediaQueryRetina($artDirName, $md, 992, $desktopHeight) 
-
-    @include mediaQuery($artDirName, $lg, 1200, $desktopHeight) 
-    @include mediaQueryRetina($artDirName, $lg, 1200, $desktopHeight) 
-
-    @include mediaQuery($artDirName, $xl, 1600, $desktopHeight) 
-    @include mediaQueryRetina($artDirName, $xl, 1600, $desktopHeight) 
-
-    @include mediaQuery($artDirName, $max, 'max', $desktopHeight) 
-    @include mediaQueryRetina($artDirName, $max, 'max', $desktopHeight) 
+    @include artMediaQuery($artDirName, $md, 992, $desktopHeight, $artFolder) 
+    @include artMediaQuery($artDirName, $lg, 1200, $desktopHeight, $artFolder) 
+    @include artMediaQuery($artDirName, $xl, 1600, $desktopHeight, $artFolder) 
+    @include artMediaQuery($artDirName, $max, 'max', $desktopHeight, $artFolder) 
 
 
 

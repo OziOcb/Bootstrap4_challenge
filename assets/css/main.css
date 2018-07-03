@@ -553,6 +553,9 @@ body {
 
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   Art Directory */
+/* Breake Points used in the artMediaQuery mixin */
+/* Dynamic Background Image url address, used in the artMediaQuery mixin */
+/* Media Queries mixin for both normal and retina displays */
 /* Art Directory Mixin */
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   HEADER */
@@ -1110,11 +1113,13 @@ body {
 
 .portfolio {
   background-color: #000000;
-  background-image: url("../img/bgs/portfolio/375x200.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat; }
+  @media (min-width: 1em) {
+    .portfolio {
+      background-image: url("../img/bgs/portfolio/375x200.jpg"); } }
   @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1em), (min-resolution: 192dpi) and (min-width: 1em) {
     .portfolio {
       background-image: url("../img/bgs/portfolio/375x200@2x.jpg"); } }

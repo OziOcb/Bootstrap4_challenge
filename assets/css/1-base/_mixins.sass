@@ -1,50 +1,11 @@
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   Art Directory
 //────  ────────────────────────────────────────────────────────────────────────────────── */
-/* Breake Points used in the artMediaQuery mixin */
-$xs: 23.5em
-$sm: 36em
-$md-secondary: 48em
-$md: 51em
-$lg: 62em
-$xl: 75em
-$max: 100em
-
-/* Dynamic Background Image url address, used in the artMediaQuery mixin */
-=artBgImage($Name, $width, $height, $ratio, $folder)
-  background-image: url("../img/#{$folder}#{$Name}/#{$width}x#{$height}#{$ratio}.jpg")
-
-/* Media Queries mixin for both normal and retina displays */
-=artMediaQuery($imageName, $breakPoint: 1em, $imageWidth: 375, $imageHeight: 200, $imageFolder: 'bgs/')
-  // normal resolution
-  @media (min-width: $breakPoint)
-    @include artBgImage($imageName, $imageWidth, $imageHeight, '', $imageFolder)
-    @content
-  // retina resolution
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: $breakPoint)
-    @include artBgImage($imageName, $imageWidth, $imageHeight, '@2x', $imageFolder)
-    @content
-
-
-/* Art Directory Mixin */
-=artDirect($artDirName, $mobileHeight: 200, $desktopHeight: 300, $artFolder: 'bgs/')
-  .#{$artDirName}
-    background:
-      color: #000000
-      size: cover
-      position: 50% 50%
-      repeat: no-repeat
-      
-    @include artMediaQuery($artDirName, $imageFolder: $artFolder)
-    @include artMediaQuery($artDirName, $xs, 576, $mobileHeight, $artFolder)
-    @include artMediaQuery($artDirName, $sm, 768, $mobileHeight, $artFolder) 
-    @include artMediaQuery($artDirName, $md-secondary, 816, $mobileHeight, $artFolder)
-
-    @include artMediaQuery($artDirName, $md, 992, $desktopHeight, $artFolder) 
-    @include artMediaQuery($artDirName, $lg, 1200, $desktopHeight, $artFolder) 
-    @include artMediaQuery($artDirName, $xl, 1600, $desktopHeight, $artFolder) 
-    @include artMediaQuery($artDirName, $max, 'max', $desktopHeight, $artFolder) 
-
-
+=artDir($path, $break: 1em)
+  @media (min-width: $break)
+    background-image: url('#{$path}.jpg')
+  
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: $break), (min-resolution: 192dpi) and (min-width: $break)
+    background-image: url('#{$path}@2x.jpg')
 
 

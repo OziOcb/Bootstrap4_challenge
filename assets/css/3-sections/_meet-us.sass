@@ -1,80 +1,34 @@
 .meet-us
   background:
-    color: #000000
-    image: url("../img/bgs/our-team/375x200.jpg")
+    color: #090909
     size: cover
     position: 50% 50%
     repeat: no-repeat
-
+    
   /* Media Queries for the responsive background */
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-    background:
-      image: url("../img/bgs/our-team/375x200@2x.jpg")
+  @include artDir('../img/bgs/meet-us/375x200')
 
   // 376px
-  @media (min-width: 23.5em)
-    background:
-      image: url("../img/bgs/our-team/576x200.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 23.5em)
-    background:
-      image: url("../img/bgs/our-team/576x200@2x.jpg")
+  @include artDir('../img/bgs/meet-us/576x200', 23.5em)
 
   // 576px
-  @media (min-width: 36em)
-    background:
-      image: url("../img/bgs/our-team/768x200.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 36em)
-    background:
-      image: url("../img/bgs/our-team/768x200@2x.jpg")
+  @include artDir('../img/bgs/meet-us/768x200', 36em)
 
   // 768px
-  @media (min-width: 48em)
-    background:
-      image: url("../img/bgs/our-team/816x200.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 48em)
-    background:
-      image: url("../img/bgs/our-team/816x200@2x.jpg")
+  @include artDir('../img/bgs/meet-us/816x200', 48em)
 
   // 816px
-  @media (min-width: 51em)
-    background:
-      image: url("../img/bgs/our-team/992x300.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 51em)
-    background:
-      image: url("../img/bgs/our-team/992x300@2x.jpg")
+  @include artDir('../img/bgs/meet-us/992x300', 51em)
 
   // 992px
-  @media (min-width: 62em)
-    background:
-      image: url("../img/bgs/our-team/1200x300.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 62em)
-    background:
-      image: url("../img/bgs/our-team/1200x300@2x.jpg")
+  @include artDir('../img/bgs/meet-us/1200x300', 62em)
 
   // 1200px
-  @media (min-width: 75em)
-    background:
-      image: url("../img/bgs/our-team/1600x300.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 75em)
-    background:
-      image: url("../img/bgs/our-team/1600x300@2x.jpg")
+  @include artDir('../img/bgs/meet-us/1600x300', 75em)
 
   // 1600px
-  @media (min-width: 100em)
-    background:
-      image: url("../img/bgs/our-team/maxx300.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 100em)
-    background:
-      image: url("../img/bgs/our-team/maxx300@2x.jpg")
+  @include artDir('../img/bgs/meet-us/maxx300', 100em)
   /* END of Media Queries for the responsive background */
 
-  
   .container
     display: flex

@@ -5,78 +5,33 @@
   align-items: center
   background:
     color: #090909
-    image: url("../img/bgs/hero/375x460.jpg")
     size: cover
     position: 50% 50%
     repeat: no-repeat
     
   /* Media Queries for the responsive background */
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-    background:
-      image: url("../img/bgs/hero/375x460@2x.jpg")
+  @include artDir('../img/bgs/hero/375x460')
 
   // 376px
-  @media (min-width: 23.5em)
-    background:
-      image: url("../img/bgs/hero/576x400.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 23.5em)
-    background:
-      image: url("../img/bgs/hero/576x400@2x.jpg")
+  @include artDir('../img/bgs/hero/576x400', 23.5em)
 
   // 576px
-  @media (min-width: 36em)
-    background:
-      image: url("../img/bgs/hero/768x400.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 36em)
-    background:
-      image: url("../img/bgs/hero/768x400@2x.jpg")
+  @include artDir('../img/bgs/hero/768x400', 36em)
 
   // 768px
-  @media (min-width: 48em)
-    background:
-      image: url("../img/bgs/hero/816x400.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 48em)
-    background:
-      image: url("../img/bgs/hero/816x400@2x.jpg")
+  @include artDir('../img/bgs/hero/816x400', 48em)
 
   // 816px
-  @media (min-width: 51em)
-    background:
-      image: url("../img/bgs/hero/992x620.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 51em)
-    background:
-      image: url("../img/bgs/hero/992x620@2x.jpg")
+  @include artDir('../img/bgs/hero/992x620', 51em)
 
   // 992px
-  @media (min-width: 62em)
-    background:
-      image: url("../img/bgs/hero/1200x620.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 62em)
-    background:
-      image: url("../img/bgs/hero/1200x620@2x.jpg")
+  @include artDir('../img/bgs/hero/1200x620', 62em)
 
   // 1200px
-  @media (min-width: 75em)
-    background:
-      image: url("../img/bgs/hero/1600x620.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 75em)
-    background:
-      image: url("../img/bgs/hero/1600x620@2x.jpg")
+  @include artDir('../img/bgs/hero/1600x620', 75em)
 
   // 1600px
-  @media (min-width: 100em)
-    background:
-      image: url("../img/bgs/hero/maxx620.jpg")
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 100em)
-    background:
-      image: url("../img/bgs/hero/maxx620@2x.jpg")
+  @include artDir('../img/bgs/hero/maxx620', 100em)
   /* END of Media Queries for the responsive background */
 
   &__btn

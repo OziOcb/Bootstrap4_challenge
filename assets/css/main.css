@@ -1040,17 +1040,166 @@ body {
   padding: 0;
   position: relative;
   background-color: #000;
-  background-image: url("../img/team/team_adrianna.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat; }
+  .member__image--adrianna-bg {
+    /* Media Queries for the responsive background */
+    /* END of Media Queries for the responsive background */ }
+    @media (min-width: 1em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/375x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1em), (min-resolution: 192dpi) and (min-width: 1em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/375x240@2x.jpg"); } }
+    @media (min-width: 23.5em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/576x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 23.5em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 23.5em), (min-resolution: 192dpi) and (min-width: 23.5em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/576x240@2x.jpg"); } }
+    @media (min-width: 36em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/540x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 36em), (min-resolution: 192dpi) and (min-width: 36em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/540x240@2x.jpg"); } }
+    @media (min-width: 48em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/360x320.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 48em), (min-resolution: 192dpi) and (min-width: 48em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/360x320@2x.jpg"); } }
+    @media (min-width: 62em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/480x295.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 62em), (min-resolution: 192dpi) and (min-width: 62em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/480x295@2x.jpg"); } }
+    @media (min-width: 75em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/570x270.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em) {
+      .member__image--adrianna-bg {
+        background-image: url("../img/bgs/staff/adrianna/570x270@2x.jpg"); } }
   .member__image--olivia-bg {
-    background-image: url("../img/team/team_olivia.jpg"); }
+    /* Media Queries for the responsive background */
+    /* END of Media Queries for the responsive background */ }
+    @media (min-width: 1em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/375x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1em), (min-resolution: 192dpi) and (min-width: 1em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/375x240@2x.jpg"); } }
+    @media (min-width: 23.5em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/576x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 23.5em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 23.5em), (min-resolution: 192dpi) and (min-width: 23.5em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/576x240@2x.jpg"); } }
+    @media (min-width: 36em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/540x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 36em), (min-resolution: 192dpi) and (min-width: 36em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/540x240@2x.jpg"); } }
+    @media (min-width: 48em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/360x320.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 48em), (min-resolution: 192dpi) and (min-width: 48em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/360x320@2x.jpg"); } }
+    @media (min-width: 62em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/480x295.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 62em), (min-resolution: 192dpi) and (min-width: 62em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/480x295@2x.jpg"); } }
+    @media (min-width: 75em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/570x270.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em) {
+      .member__image--olivia-bg {
+        background-image: url("../img/bgs/staff/olivia/570x270@2x.jpg"); } }
   .member__image--taylor-bg {
-    background-image: url("../img/team/team_taylor.jpg"); }
+    /* Media Queries for the responsive background */
+    /* END of Media Queries for the responsive background */ }
+    @media (min-width: 1em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/375x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1em), (min-resolution: 192dpi) and (min-width: 1em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/375x240@2x.jpg"); } }
+    @media (min-width: 23.5em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/576x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 23.5em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 23.5em), (min-resolution: 192dpi) and (min-width: 23.5em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/576x240@2x.jpg"); } }
+    @media (min-width: 36em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/540x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 36em), (min-resolution: 192dpi) and (min-width: 36em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/540x240@2x.jpg"); } }
+    @media (min-width: 48em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/360x320.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 48em), (min-resolution: 192dpi) and (min-width: 48em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/360x320@2x.jpg"); } }
+    @media (min-width: 62em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/480x295.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 62em), (min-resolution: 192dpi) and (min-width: 62em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/480x295@2x.jpg"); } }
+    @media (min-width: 75em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/570x270.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em) {
+      .member__image--taylor-bg {
+        background-image: url("../img/bgs/staff/taylor/570x270@2x.jpg"); } }
   .member__image--thomas-bg {
-    background-image: url("../img/team/team_thomas.jpg"); }
+    /* Media Queries for the responsive background */
+    /* END of Media Queries for the responsive background */ }
+    @media (min-width: 1em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/375x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1em), (min-resolution: 192dpi) and (min-width: 1em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/375x240@2x.jpg"); } }
+    @media (min-width: 23.5em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/576x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 23.5em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 23.5em), (min-resolution: 192dpi) and (min-width: 23.5em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/576x240@2x.jpg"); } }
+    @media (min-width: 36em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/540x240.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 36em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 36em), (min-resolution: 192dpi) and (min-width: 36em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/540x240@2x.jpg"); } }
+    @media (min-width: 48em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/360x320.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 48em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 48em), (min-resolution: 192dpi) and (min-width: 48em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/360x320@2x.jpg"); } }
+    @media (min-width: 62em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/480x295.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 62em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 62em), (min-resolution: 192dpi) and (min-width: 62em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/480x295@2x.jpg"); } }
+    @media (min-width: 75em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/570x270.jpg"); } }
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (-o-min-device-pixel-ratio: 2/1) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em) {
+      .member__image--thomas-bg {
+        background-image: url("../img/bgs/staff/thomas/570x270@2x.jpg"); } }
   .member__image:after {
     content: '';
     position: absolute;

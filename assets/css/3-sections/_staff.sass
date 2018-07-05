@@ -62,19 +62,49 @@
   position: relative
   background:
     color: #000
-    image: url("../img/team/team_adrianna.jpg")
     size: cover
     position: 50% 50%
     repeat: no-repeat
   
+  &--adrianna-bg
+    /* Media Queries for the responsive background */
+    @include artDir('../img/bgs/staff/adrianna/375x240')
+    @include artDir('../img/bgs/staff/adrianna/576x240', 23.5em) // 376px
+    @include artDir('../img/bgs/staff/adrianna/540x240', 36em) // 576px
+    @include artDir('../img/bgs/staff/adrianna/360x320', 48em) // 768px
+    @include artDir('../img/bgs/staff/adrianna/480x295', 62em) // 992px
+    @include artDir('../img/bgs/staff/adrianna/570x270', 75em) // 1200px
+    /* END of Media Queries for the responsive background */
+
   &--olivia-bg
-    background-image: url("../img/team/team_olivia.jpg")
+    /* Media Queries for the responsive background */
+    @include artDir('../img/bgs/staff/olivia/375x240')
+    @include artDir('../img/bgs/staff/olivia/576x240', 23.5em) // 376px
+    @include artDir('../img/bgs/staff/olivia/540x240', 36em) // 576px
+    @include artDir('../img/bgs/staff/olivia/360x320', 48em) // 768px
+    @include artDir('../img/bgs/staff/olivia/480x295', 62em) // 992px
+    @include artDir('../img/bgs/staff/olivia/570x270', 75em) // 1200px
+    /* END of Media Queries for the responsive background */
 
   &--taylor-bg
-    background-image: url("../img/team/team_taylor.jpg")
+    /* Media Queries for the responsive background */
+    @include artDir('../img/bgs/staff/taylor/375x240')
+    @include artDir('../img/bgs/staff/taylor/576x240', 23.5em) // 376px
+    @include artDir('../img/bgs/staff/taylor/540x240', 36em) // 576px
+    @include artDir('../img/bgs/staff/taylor/360x320', 48em) // 768px
+    @include artDir('../img/bgs/staff/taylor/480x295', 62em) // 992px
+    @include artDir('../img/bgs/staff/taylor/570x270', 75em) // 1200px
+    /* END of Media Queries for the responsive background */
 
   &--thomas-bg
-    background-image: url("../img/team/team_thomas.jpg")
+    /* Media Queries for the responsive background */
+    @include artDir('../img/bgs/staff/thomas/375x240')
+    @include artDir('../img/bgs/staff/thomas/576x240', 23.5em) // 376px
+    @include artDir('../img/bgs/staff/thomas/540x240', 36em) // 576px
+    @include artDir('../img/bgs/staff/thomas/360x320', 48em) // 768px
+    @include artDir('../img/bgs/staff/thomas/480x295', 62em) // 992px
+    @include artDir('../img/bgs/staff/thomas/570x270', 75em) // 1200px
+    /* END of Media Queries for the responsive background */
   
   &:after
     content: ''

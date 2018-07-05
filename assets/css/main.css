@@ -708,6 +708,7 @@ body {
       display: block; } }
 
 .hero {
+  margin-top: 6rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

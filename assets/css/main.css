@@ -566,6 +566,8 @@ body {
   .main-navi__brand {
     margin-top: 1rem;
     margin-bottom: 1rem; }
+  .main-navi__nav-item {
+    padding: .9rem 0; }
 
 .social-and-toggler-wrapper {
   display: -webkit-box;

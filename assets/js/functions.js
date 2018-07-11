@@ -41,7 +41,7 @@ var radialObj1 = radialIndicator('#indicatorContainer1', {
   frameTime: 1
 }); 
 
-radialObj1.animate(50);
+radialObj1.animate(0);
 
 var radialObj2 = radialIndicator('#indicatorContainer2', {
   barColor : '#009989',
@@ -54,7 +54,7 @@ var radialObj2 = radialIndicator('#indicatorContainer2', {
   frameTime: 1
 }); 
 
-radialObj2.animate(35);
+radialObj2.animate(0);
 
 var radialObj3 = radialIndicator('#indicatorContainer3', {
   barColor : '#152b3c',
@@ -67,4 +67,26 @@ var radialObj3 = radialIndicator('#indicatorContainer3', {
   frameTime: 1
 }); 
 
-radialObj3.animate(80);
+radialObj3.animate(0);
+
+// get the #growth section element
+var isInViewport = function (elem) {
+  var bounding = elem.getBoundingClientRect();
+  return (
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+var growth = document.querySelector('.indicator');
+window.addEventListener('scroll', function (event) {
+	if (isInViewport(growth)) {
+
+    radialObj1.animate(50);
+    radialObj2.animate(35);
+    radialObj3.animate(80);
+
+	}
+}, false);

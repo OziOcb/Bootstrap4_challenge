@@ -8,4 +8,11 @@
   @media (-webkit-min-device-pixel-ratio: 2) and (min-width: $break), (min-resolution: 192dpi) and (min-width: $break)
     background-image: url('#{$path}@2x.jpg')
 
-
+/* //────  ──────────────────────────────────────────────────────────────────────────────────
+  Projects List Loop
+//────  ────────────────────────────────────────────────────────────────────────────────── */
+=proListLoop
+  @for $num1 from 1 through 3
+    @for $num2 from 1 through 7
+      .projects__item--#{$num1}-#{$num2}
+        background-image: url('../img/projects/#{$num1}-#{$num2}.jpg')

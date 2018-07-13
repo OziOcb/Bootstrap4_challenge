@@ -29,7 +29,8 @@
       repeat: no-repeat
 
   @media (hover: hover)
-    &:hover
+    &:hover,
+    &--active
       filter: grayscale(0) opacity(1)
       text-decoration: none
 
@@ -43,6 +44,13 @@
  * Automatically generates backgrounds of each tile*/
 @include proListLoop
 
+.projects__item--4-1
+  background-image: url('../img/projects/4-1.jpg')
+.projects__item--4-2
+  background-image: url('../img/projects/4-2.jpg')
+.projects__item--4-3
+  background-image: url('../img/projects/4-3.jpg')
+  
 //──── /* Display changes */ ─────────────────────────────────────────────────────────────
 // 480 - base on single item max width = 160px
 @media (min-width: 30em)

@@ -1,3 +1,12 @@
+/* Keyframe for animation */
+@keyframes pulse 
+  0% 
+    transform: scale(1)
+  50% 
+    transform: scale(1.1)
+  100% 
+    transform: scale(1.05)
+
 /* Base */
 .projects__item
   width: 33.3333%
@@ -28,11 +37,21 @@
       position: 50% 20%
       repeat: no-repeat
 
+  &--active
+    filter: grayscale(0) opacity(1)
+    text-decoration: none
+    z-index: 999
+    animation: pulse .3s ease-in-out
+
+    &:after
+      opacity: 1
+
   @media (hover: hover)
-    &:hover,
-    &--active
+    &:hover
       filter: grayscale(0) opacity(1)
       text-decoration: none
+      z-index: 999
+      animation: pulse .3s ease-in-out
 
       &:after
         opacity: 1

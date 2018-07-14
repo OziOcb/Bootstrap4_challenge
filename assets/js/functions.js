@@ -146,7 +146,7 @@ function randomVerticalLine() {
 
 
 // Zapętlić cala ta funkcjie 
-let timer = setInterval(randHighlight, 2000);
+let timer = setInterval(randHighlight, 3000);
 
 function randHighlight() {
   // Usówa klase --active z kadego tile

@@ -113,11 +113,9 @@ function removeClasses() {
     tiles[i].classList.remove('projects__item--active')
   }
 }
-removeClasses();
-
 
 // Wygenerować losową liczbe od 1 do 4 dla poziomu
-// Wziasc pod uwage to ze tylko na najmiejszym MQ sa 4 linie kafelkow
+// Wziac pod uwage to ze tylko na najmiejszym MQ sa 4 linie kafelkow
 function randomHorizontalLine() {
   let hori;
   if (mq4.matches) {
@@ -129,7 +127,7 @@ function randomHorizontalLine() {
 };
 
 // Wygenerować losową liczbe od 1 do 3 dla pionu
-// Wziasc pod uwage to ze z kazdym kolejnym MQ liczba kafelkow zwieksza sie o 1
+// Wziac pod uwage to ze z kazdym kolejnym MQ liczba kafelkow zwieksza sie o 1
 function randomVerticalLine() {
   let verti;
   if (mq7.matches) {
@@ -146,20 +144,20 @@ function randomVerticalLine() {
   return verti;
 }
 
-// Dodac klase --active do losowo wygenerowanego kafelka
-const tile = document.getElementsByClassName(`projects__item--${randomHorizontalLine()}-${randomVerticalLine()}`)[0];
-function highlightRandomTile() {
-  tile.classList.add('projects__item--active');
-}
-highlightRandomTile();
-
-
-
-console.log(tile);
-
-
-
-
-// Do odpowieniego elementu (np. .projects__item--1-1) dodać klase projects__item--active
 
 // Zapętlić cala ta funkcjie 
+let timer = setInterval(randHighlight, 2000);
+
+function randHighlight() {
+  // Usówa klase --active z kadego tile
+  removeClasses();
+
+  // Wybiera losowy kafelek
+  const tile = document.getElementsByClassName(`projects__item--${randomHorizontalLine()}-${randomVerticalLine()}`)[0];
+
+  // Dodaje klase --active do losowo wygenerowanego kafelka
+  tile.classList.add('projects__item--active');
+
+};
+
+

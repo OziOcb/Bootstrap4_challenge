@@ -137,12 +137,22 @@ const randomVerticalLine = () => {
 // Funkcjia musi
 // Usunac klase projects__item--active z kazdego elementu
 const tiles = document.getElementsByClassName('projects__item');
+const logos = document.getElementsByClassName('logos__item');
 
-const removeClasses = () => {
-  for (i = 0; i < tiles.length; i++) {
-    tiles[i].classList.remove('projects__item--active')
+const removeClasses = (el) => {
+  if (el === tiles) {
+    for (i = 0; i < el.length; i++) {
+      el[i].classList.remove('projects__item--active')
+    }
+  } else {
+    for (i = 0; i < el.length; i++) {
+      el[i].classList.remove('logos__item--active')
+    }
   }
 };
+
+
+
 
 // Stworzyc timer oraz funkcje ktora go zatrzymuje
 let timer = setInterval(randHighlight, 4000);
@@ -151,46 +161,90 @@ const stopTimer = () => {
   clearInterval(timer);
 };
 
-// Stworzyc funkcje ktora podswietla losowy kalfelek
-function randHighlight() {
-  // Usówa klase --active z kadego tile
-  removeClasses();
 
+
+
+
+
+// funkacja ktora wybiera losowy kafelek
+const randomTile = () => {
   // Wybiera losowy kafelek
   const tile = document.getElementsByClassName(`projects__item--${randomHorizontalLine()}-${randomVerticalLine()}`)[0];
 
   // Dodaje klase --active do losowo wygenerowanego kafelka
   tile.classList.add('projects__item--active');
+};
+
+
+
+// funkacja ktora wybiera losowe logo
+// losowa liczba dla logos
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// UWAGA POTRZEBNA ZMIANA!! LICZBY MUSZA GENEROWAC SIE ZALEZZNIE OD SZEROKOSCI OKNA
+// W TEJ CHWILI TAK NIE JEST! CZYLI NA MNIEJSZYCH SZEROKOSCIACH MOZE ZOSTAC 
+// POSDWIETLONE LOGO KTORE JEST NIEWIDOCZNE
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+const randomLogoNum = () => Math.floor(Math.random() * logos.length);
+
+const randomLogo = () => {
+  // Wybiera losowe logo
+  const logo = document.getElementsByClassName('logos__item')[randomLogoNum()];
+
+  // Dodaje klase --active do losowo wygenerowanego logo
+  logo.classList.add('logos__item--active');
+};
+
+
+
+// funkcja ktora podswietla losowy kalfelek lub logo
+function randHighlight() {
+  // Usówa klase --active z kadego kafelka
+  removeClasses(tiles);
+  randomTile();
+
+  // Usówa klase --active z kadego logo
+  removeClasses(logos);
+  randomLogo();
 
 };
 
 
 
 // EVENTS
-// Zatrzymac funkcje i usunac klase --active kiedy wystapi hover na caly .projects
-var test = document.querySelector(".projects");
+// Zatrzymac funkcje i usunac klase --active kiedy wystapi hover na caly .projects albo .logos
+const projectsSection = document.querySelector(".projects");
+const logosSection = document.querySelector(".logos");
 // this handler will be executed every time the cursor is moved over a .projects
-test.addEventListener("mouseover", function( event ) {   
-  stopTimer();
-  removeClasses();
 
-  console.log('mouse over');
-}, false);
+const events = section => {
+  section.addEventListener("mouseover", function( event ) {   
+    stopTimer();
+    if (section === projectsSection) {
+      removeClasses(tiles);
+    } else {
+      removeClasses(logos);
+    }
+  }, false);
 
-// resetuje interwal
-const resetInter = time => {
-  stopTimer();
-  timer = setInterval(randHighlight, time);
-  randHighlight();
+  // resetuje interwal
+  const resetInter = time => {
+    stopTimer();
+    timer = setInterval(randHighlight, time);
+    randHighlight();
+  };
+
+  // odpala ponownie losowe podswietlanie kafleka, po opuszczeiu kursora
+  section.addEventListener("mouseleave", function( event ) {   
+    resetInter(4000);
+  }, false);
+
+  // odpala ponownie losowe podswietlenie, po kliknieciu w kafelek
+  section.addEventListener("click", function( event ) {   
+    resetInter(4000);
+  }, false);
 };
 
-// odpala ponownie losowe podswietlanie kafleka, po opuszczeiu kursora
-test.addEventListener("mouseleave", function( event ) {   
-  resetInter(4000);
-}, false);
-
-// odpala ponownie losowe podswietlenie, po kliknieciu w kafelek
-test.addEventListener("click", function( event ) {   
-  resetInter(4000);
-}, false);
+events(projectsSection);
+events(logosSection);
 

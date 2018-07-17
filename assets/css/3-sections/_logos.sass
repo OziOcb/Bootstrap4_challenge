@@ -20,10 +20,18 @@
   transition: all .3s ease-in-out
   border: $logos-border
 
+  &--active
+    filter: grayscale(0) opacity(1)
+    text-decoration: none
+    z-index: 999
+    animation: pulse .3s ease-in-out
+
   @media (hover: hover)
     &:hover
       filter: grayscale(0) opacity(1)
       text-decoration: none
+      z-index: 999
+      animation: pulse .3s ease-in-out
 
   &:first-child
     border-left: none

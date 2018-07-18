@@ -41,8 +41,6 @@ const radialObj1 = radialIndicator('#indicatorContainer1', {
   frameTime: 1
 }); 
 
-radialObj1.animate(0);
-
 const radialObj2 = radialIndicator('#indicatorContainer2', {
   barColor : '#009989',
   barBgColor: '#e5e3e3',
@@ -54,8 +52,6 @@ const radialObj2 = radialIndicator('#indicatorContainer2', {
   frameTime: 1
 }); 
 
-radialObj2.animate(0);
-
 const radialObj3 = radialIndicator('#indicatorContainer3', {
   barColor : '#152b3c',
   barBgColor: '#e5e3e3',
@@ -66,8 +62,6 @@ const radialObj3 = radialIndicator('#indicatorContainer3', {
   displayNumber: false,
   frameTime: 1
 }); 
-
-radialObj3.animate(0);
 
 // Check if an element is in the viewport
 const isInViewport = elem => {

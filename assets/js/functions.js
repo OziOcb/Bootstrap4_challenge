@@ -1,8 +1,7 @@
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   MAIN NAVIGATION 
 //────  ──────────────────────────────────────────────────────────────────────────────────*/
-
-// Adds 'active' class to the Toggler
+// Add ...--active class to the Toggler
 const toggler = document.getElementById('main-navi-toggler');
 
 toggler.addEventListener('click', function() {
@@ -10,10 +9,11 @@ toggler.addEventListener('click', function() {
 }, false)
 
 
-// Removes .toggle--active class from #main-navi-toggler after clicking on any .nav-link
+// Remove .toggle--active class from #main-navi-toggler after clicking on any .nav-link
 const navigationLink = document.querySelectorAll('.nav-link');
+const navLinkLength = navigationLink.length;
 
-for(i = 0; i < navigationLink.length; i++) {
+for (i = 0; i < navLinkLength; i++) {
   navigationLink[i].addEventListener('click', function() {
     document.getElementById('main-navi-toggler').classList.remove('toggler--active');
   }, false)
@@ -22,9 +22,9 @@ for(i = 0; i < navigationLink.length; i++) {
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   SMOOTH SCROLL
 //────  ──────────────────────────────────────────────────────────────────────────────────*/
-// Makes that scrolling to the anchor includes the height of the fixed-nav
-var defaultDuration = 777 // ms
-var edgeOffset = 65 // px
+// Make that the scrolling to the anchor includes the height of the fixed-nav
+const defaultDuration = 777 // ms
+const edgeOffset = 65 // px
 zenscroll.setup(defaultDuration, edgeOffset)
 
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
@@ -69,7 +69,7 @@ const radialObj3 = radialIndicator('#indicatorContainer3', {
 
 radialObj3.animate(0);
 
-// get the #growth section element
+// Check if an element is in the viewport
 const isInViewport = elem => {
   const bounding = elem.getBoundingClientRect();
   return (
@@ -80,34 +80,35 @@ const isInViewport = elem => {
   );
 };
 
+// Trigger Radial Indicators when the .growth section appears in the viewport
 const growthSection = document.querySelector('.indicator');
+
 window.addEventListener('scroll', function (event) {
 	if (isInViewport(growthSection)) {
-
     radialObj1.animate(50);
     radialObj2.animate(35);
     radialObj3.animate(80);
-
 	}
 }, false);
 
 /* //────  ──────────────────────────────────────────────────────────────────────────────────
   Projects and Logos Sections Random Highlight
 //────  ────────────────────────────────────────────────────────────────────────────────── */
-// BASE
-// Stworzyc media query dla kazdej szerokosci ekranu
+
+//──── BASE / HELPERS ────────────────────────────────────────────────────────────────────
+// Create MQ for each breakepoint
 const mq4 = window.matchMedia( "(min-width: 30em)" );
 const mq5 = window.matchMedia( "(min-width: 40em)" );
 const mq6 = window.matchMedia( "(min-width: 50em)" );
 const mq7 = window.matchMedia( "(min-width: 60em)" );
 
-// Stworzyć funkcje do generowania losowych liczb zaleznie od MQ
+// Create a function that generates random numbers, with the ability to choose a range
 const randomNum = num => Math.floor(Math.random() * num) + 1;
 
-// Wygenerować losową liczbe od 1 do 4 dla poziomu
-// Wziac pod uwage to ze tylko na najmiejszym MQ sa 4 linie kafelkow
+// Generate a random number from 1 to 4 for horizontal lines
+// Note that, only the smallest MQ, in the Projects Section, has 4 horizontal lines!
 const randomHorizontalLine = section => {
-  if (section === 'tiles') {
+  if (section === 'projects') {
     if (mq4.matches) {
       return randomNum(3);
     } else {
@@ -118,8 +119,8 @@ const randomHorizontalLine = section => {
   }
 };
 
-// Wygenerować losową liczbe od 1 do 3 dla pionu
-// Wziac pod uwage to ze z kazdym kolejnym MQ liczba kafelkow zwieksza sie o 1
+// Generate a random number from 1 to 3 for columns
+// Note that, the number of visible tiles/logos grows by 1, whit each MQ
 const randomVerticalLine = () => {
   if (mq7.matches) {
     return randomNum(7)
@@ -134,104 +135,93 @@ const randomVerticalLine = () => {
   }
 };
 
-// Funkcjia musi
-// Usunac klase projects__item--active z kazdego elementu
+//──── MAIN FUNCTION ──────────────────────────────────────────────────────────────────
+// Remove ...--active class form every element of a highlightet section
 const tiles = document.getElementsByClassName('projects__item');
 const logos = document.getElementsByClassName('logos__item');
 
-const removeClasses = (el) => {
+const removeClasses = el => {
+  const elementLength = el.length;
+  
   if (el === tiles) {
-    for (i = 0; i < el.length; i++) {
+    for (i = 0; i < elementLength; i++) {
       el[i].classList.remove('projects__item--active')
     }
   } else {
-    for (i = 0; i < el.length; i++) {
+    for (i = 0; i < elementLength; i++) {
       el[i].classList.remove('logos__item--active')
     }
   }
 };
 
+// Create a function that chooses and highlights a random tile
+const randomTileHighlight = () => {
+  // Chooses a random tile
+  const tile = document.getElementsByClassName(`projects__item--${randomHorizontalLine('projects')}-${randomVerticalLine()}`)[0];
 
+  // Add ...--active class to that tile
+  tile.classList.add('projects__item--active');
+};
 
+// Create a function that chooses and highlights a random logo
+const randomLogoHighlight = () => {
+  // Chooses a random logo
+  const logo = document.getElementsByClassName(`logos__item--${randomHorizontalLine()}-${randomVerticalLine()}`)[0];
 
-// Stworzyc timer oraz funkcje ktora go zatrzymuje
-let timer = setInterval(randomHighlight, 4000);
+  // Add ...--active class to that logo
+  logo.classList.add('logos__item--active');
+};
+
+// Create a timer and a function that stops it.
+let timer = setInterval(switchHighlightedElement, 4000);
 
 const stopTimer = () => {
   clearInterval(timer);
 };
 
-
-
-
-
-
-// funkacja ktora wybiera losowy kafelek
-const randomTile = () => {
-  // Wybiera losowy kafelek
-  const tile = document.getElementsByClassName(`projects__item--${randomHorizontalLine('tiles')}-${randomVerticalLine()}`)[0];
-
-  // Dodaje klase --active do losowo wygenerowanego kafelka
-  tile.classList.add('projects__item--active');
-};
-
-
-
-// funkacja ktora wybiera losowe logo
-// losowa liczba dla logos
-const randomLogo = () => {
-  // Wybiera losowe logo
-  const logo = document.getElementsByClassName(`logos__item--${randomHorizontalLine('logos')}-${randomVerticalLine()}`)[0];
-
-  // Dodaje klase --active do losowo wygenerowanego logo
-  logo.classList.add('logos__item--active');
-};
-
-
-
-// funkcja ktora podswietla losowy kalfelek lub logo
-function randomHighlight() {
-  // Usówa klase --active z kadego kafelka
+// Swtich between highlighted elements 
+function switchHighlightedElement() {
+  // Projects
   removeClasses(tiles);
-  randomTile();
+  randomTileHighlight();
 
-  // Usówa klase --active z kadego logo
+  // Logos
   removeClasses(logos);
-  randomLogo();
-
+  randomLogoHighlight();
 };
 
-
-
-// EVENTS
-// Zatrzymac funkcje i usunac klase --active kiedy wystapi hover na caly .projects albo .logos
+//──── EVENTS ────────────────────────────────────────────────────────────────────────────
+// Create variables for each section
 const projectsSection = document.querySelector(".projects");
 const logosSection = document.querySelector(".logos");
-// this handler will be executed every time the cursor is moved over a .projects
 
+// Create a function that resets the timer and highlights a new element
+const resetInter = time => {
+  stopTimer();
+  timer = setInterval(switchHighlightedElement, time);
+  switchHighlightedElement();
+};
+
+// Create a function that: 
+//  stops the timer and removes ...--active class when a hover occurs on a specific section
+//  and Re-start the timer after leaving the section or after clicking on a link
 const events = section => {
+  // Stop the timer and remove ...--active class 
   section.addEventListener("mouseover", function( event ) {   
     stopTimer();
     if (section === projectsSection) {
       removeClasses(tiles);
-    } else {
+    } else if (section === logosSection) {
       removeClasses(logos);
     }
   }, false);
 
-  // resetuje interwal
-  const resetInter = time => {
-    stopTimer();
-    timer = setInterval(randomHighlight, time);
-    randomHighlight();
-  };
-
-  // odpala ponownie losowe podswietlanie kafleka, po opuszczeiu kursora
+  // fire again the random highlighting of a element, when the cursor leaves a section
   section.addEventListener("mouseleave", function( event ) {   
     resetInter(4000);
   }, false);
 
-  // odpala ponownie losowe podswietlenie, po kliknieciu w kafelek
+  // fire again the random highlighting of a element, after a click on a link
   section.addEventListener("click", function( event ) {   
     resetInter(4000);
   }, false);
@@ -239,4 +229,3 @@ const events = section => {
 
 events(projectsSection);
 events(logosSection);
-

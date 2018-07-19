@@ -33,11 +33,12 @@
     transition: all .3s ease-in-out
     background: 
       image: url('../img/project_eye.svg')
-      size: 40px 50px
+      size: 40px auto
       position: 50% 20%
       repeat: no-repeat
 
-  &--active
+  &--active,
+  &:hover
     filter: grayscale(0) opacity(1)
     text-decoration: none
     z-index: 999
@@ -46,15 +47,17 @@
     &:after
       opacity: 1
 
-  @media (hover: hover)
-    &:hover
-      filter: grayscale(0) opacity(1)
-      text-decoration: none
-      z-index: 999
-      animation: pulse .3s ease-in-out
+  &:focus
+    @include outline
+    filter: grayscale(.9) opacity(1)
+    animation: pulse .3s ease-in-out
 
+  @media (hover: none)
+    &:hover
+      filter: grayscale(1) opacity(.5)
+     
       &:after
-        opacity: 1
+        opacity: 0
 
   &:nth-child(n+4) // hides tiles from 4 to 7 on mobile
     display: none

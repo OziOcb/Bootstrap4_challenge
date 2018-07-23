@@ -12,6 +12,8 @@ $indicator2: #009989
 $indicator3: #152b3c
 $member-underline: #f34739
 $footer-underline: #009989
+$outline-color: #80BCFA
+$outline-alternative-color: #111111
 
 // Shapes
 $member-border-transparent: 3rem solid transparent
@@ -21,7 +23,7 @@ $member-border-triangle: 4rem solid $bg-color
 $logos-border: 1px solid rgba(0,0,0,.05)
 
 // Mixins
-@mixin outline
-  box-shadow: 0 0 .2rem .2rem #111, inset 0 0 .1rem .1rem #111
+@mixin outline($color)
+  box-shadow: 0 0 .2rem .2rem $color, inset 0 0 .1rem .1rem $color
   border-radius: .1rem
   padding: .3rem

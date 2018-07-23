@@ -63,8 +63,17 @@
       margin-bottom: 16rem
       padding: .8em 3.333em
 
+    &:focus
+      background: #eeeeee
+      color: #111111
+
   &__arrow-link
     margin-bottom: 4rem
+
+    &:focus
+      // subtract combained thicknes of the outline (.6rem) from margin-bottom (4rem)
+      margin-bottom: calc(4rem - .6rem)
+      @include outline($outline-color)
 
   &__arrow-image
     animation: pulse 3s ease-in-out infinite

@@ -5,6 +5,7 @@ var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var jade        = require('gulp-jade');
 var sass        = require('gulp-sass');
+var critical    = require('critical');
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -63,7 +64,7 @@ gulp.task('js', function() {
 });
 
 /**
-* Proba zainkludowania obslugi Jade
+* Compile Jade files from _jadefiles into _includes (HTML)
 */
 
 gulp.task('jade', function(){
@@ -71,6 +72,40 @@ gulp.task('jade', function(){
     .pipe(jade())
     .pipe(gulp.dest('_includes'));
 });
+
+
+// -----------------------------------------------------------------------------
+// Generate critical-path CSS
+//
+// This task generates a small, minimal amount of your CSS based on which rules
+// are visible (aka "above the fold") during a page load. We will use a Jekyll
+// template command to inline the CSS when the site is generated.
+//
+// All styles should be directly applying to an element visible when your
+// website renders. If the user has to scroll even a small amount, it's not
+// critical CSS.
+// -----------------------------------------------------------------------------
+gulp.task('critical', function (cb) {
+    critical.generate({
+      base: '_site/',
+      src: 'index.html',
+      css: ['assets/css/main.css'],
+      dimensions: [{
+        width: 320,
+        height: 480
+      },{
+        width: 768,
+        height: 1024
+      },{
+        width: 1280,
+        height: 960
+      }],
+      dest: '../_includes/critical.css',
+      minify: true,
+      extract: false
+    });
+  });
+
 
 /**
  * Watch scss files for changes & recompile
